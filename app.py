@@ -42,15 +42,15 @@ if st.button("Generate Jersey Design"):
             try:
                 # Call OpenAI DALL·E 3 API with the dynamically created prompt
              response = openai.images.generate(
-    model="dall-e-3",
-    prompt=prompt,
-    n=1,
-    size="1024x1024",
-    quality="hd"
+			model="dall-e-3",
+			prompt=prompt,
+			n=1,
+			size="1024x1024",
+			quality="hd"
 )
 
                 # Extract the image URL
-                image_url = response['data'][0]['url']
+             image_url = response['data'][0]['url']
 
                 # Display the generated image
                 st.image(image_url, caption="Generated Jersey Design", use_container_width=True)
