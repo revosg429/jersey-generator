@@ -1,0 +1,7 @@
+streamlit
+openai
+requests
+pillow
+opencv-python
+numpy
+python-dotenv
