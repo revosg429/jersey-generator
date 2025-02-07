@@ -1,8 +1,7 @@
 import openai
 import streamlit as st
-import os
-from dotenv import load_dotenv
 
+# Set up OpenAI API key from Streamlit Secrets (NOT .env)
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 # Streamlit app title
@@ -32,6 +31,7 @@ if st.button("Generate Jersey Design"):
     if prompt.strip():
         with st.spinner("Generating jersey design..."):
             try:
+                # Call OpenAI DALL·E 3 API
                 response = openai.images.generate(
                     model="dall-e-3",
                     prompt=prompt,
@@ -39,10 +39,13 @@ if st.button("Generate Jersey Design"):
                     size="1024x1024",
                     quality="hd"
                 )
-                image_url = response['data'][0]['url']
+
+                # ✅ Correct way to extract image URL
+                image_url = response.data[0].url
 
                 # Display the generated image
                 st.image(image_url, caption="Generated Jersey Design", use_container_width=True)
+
             except Exception as e:
                 st.error(f"Error generating image: {e}")
     else:
