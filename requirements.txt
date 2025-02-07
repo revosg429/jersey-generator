@@ -5,3 +5,4 @@ pillow
 opencv-python
 numpy
 python-dotenv
+openai>=1.0.0

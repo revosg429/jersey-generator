@@ -41,13 +41,13 @@ if st.button("Generate Jersey Design"):
         with st.spinner("Generating jersey design..."):
             try:
                 # Call OpenAI DALL·E 3 API with the dynamically created prompt
-                response = openai.Image.create(
-                    prompt=prompt,
-                    model="dall-e-3",  # Specify the DALL·E 3 model
-                    n=1,  # Number of images to generate
-                    size="1024x1024",  # Image resolution
-                    quality="hd"  # High-quality setting
-                )
+             response = openai.images.generate(
+    model="dall-e-3",
+    prompt=prompt,
+    n=1,
+    size="1024x1024",
+    quality="hd"
+)
 
                 # Extract the image URL
                 image_url = response['data'][0]['url']
