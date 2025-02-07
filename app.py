@@ -37,26 +37,27 @@ st.write(prompt)
 
 # Button to generate the image
 if st.button("Generate Jersey Design"):
-    if prompt.strip():
-        with st.spinner("Generating jersey design..."):
-            try:
-                # Call OpenAI DALL·E 3 API with the dynamically created prompt
-             response = openai.images.generate(
-			model="dall-e-3",
-			prompt=prompt,
-			n=1,
-			size="1024x1024",
-			quality="hd"
-)
+   			
+				
+				if prompt.strip():
+    with st.spinner("Generating jersey design..."):
+        try:
+            response = openai.images.generate(
+                model="dall-e-3",
+                prompt=prompt,
+                n=1,
+                size="1024x1024",
+                quality="hd"
+            )
+            image_url = response['data'][0]['url']  # ✅ Correct indentation
 
-                # Extract the image URL
-             image_url = response['data'][0]['url']
-
-                # Display the generated image
-                st.image(image_url, caption="Generated Jersey Design", use_container_width=True)
-
-            except Exception as e:
-                st.error(f"Error generating image: {e}")
+            st.image(image_url, caption="Generated Jersey Design", use_container_width=True)  # ✅ Correct indentation
+        except Exception as e:
+            st.error(f"Error generating image: {e}")
+						
+				
+				
+				
     else:
         st.warning("Please provide the necessary details to generate an image.")
 
