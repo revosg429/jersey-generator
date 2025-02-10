@@ -9,13 +9,17 @@ st.title("REVO Custom Jersey Generator")
 
 # User inputs for customization
 jersey_type = st.selectbox("What type of jersey do you want to create?", ["Soccer", "Basketball", "Baseball", "Hockey"])
-colors = st.text_input("What colors do you want to use?", "Blue and White")
+primary_color = st.selectbox("Primary Color", ["Blue", "Red", "Green", "Yellow", "Black", "White", "Gray"])
+secondary_color = st.selectbox("Secondary Color", ["White", "Black", "Gray", "Blue", "Red", "Green", "Yellow"])
+third_color = st.selectbox("Third Color", ["None", "White", "Black", "Gray", "Blue", "Red", "Green", "Yellow"])
+
 design_elements = st.text_input("Do you have any specific design elements in mind?", "Stripes")
 team_name = st.text_input("Anything else you'd like to include? (e.g., team name)", "Wildcats")
 
 # Generate the prompt dynamically
 prompt = (
-    f"A {jersey_type} jersey featuring {colors} colors. The design includes {design_elements}. "
+	f"A collection of four professional {jersey_type} jerseys showing Front and Back, displayed in a side-by-side grid. "
+    f"A  Each jersey features {primary_color}, {secondary_color}, and {third_color}  colors. The design includes {design_elements}. "
     f"The jersey should have a sleek and modern look, suitable for a professional team. "
     f"Include the team name '{team_name}' as part of the design. "
     f"This is a clean, minimalist team jersey designed without commercial branding or corporate symbols. "
