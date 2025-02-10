@@ -57,3 +57,20 @@ if st.button("Generate Jersey Design"):
 
 # Footer
 st.write("Powered by OpenAI's DALL·E 3 model.")
+
+
+st.markdown("### Disclaimer")
+st.markdown("""
+This jersey designer is an AI-powered tool intended for **conceptual and quick reference purposes only**. 
+The generated designs are **computer-generated renderings** and may not always reflect precise colors, patterns, or branding constraints. 
+This service does not provide **actual product manufacturing, printing, or licensing** of any designs.
+
+All images are generated using **OpenAI's DALL·E model**, and while efforts are made to ensure unique designs, 
+the system does not recognize trademarks, logos, or copyrights. Users should verify all designs before use in **commercial or official applications**.
+
+By using this app, you acknowledge that the generated designs are for **inspirational and illustrative purposes only**, 
+and we do not assume responsibility for any legal or production-related implications.
+
+🔹 **For professional design services or production inquiries, consult a licensed designer or manufacturer.**
+""")
+
