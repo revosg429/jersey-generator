@@ -8,7 +8,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 st.title("REVO Custom Jersey Generator")
 
 # User inputs for customization
-jersey_type = st.selectbox("What type of jersey do you want to create?", ["Soccer", "Basketball", "Baseball", "Hockey"])
+jersey_type = st.selectbox("What type of jersey do you want to create?", ["Baseball", "Basketball", "Cheerleading", "Cycling", "Flag Football", "Football", "Hockey", "Lacrosse", "Rugby", "Soccer", "Softball", "Track & Field", "Volleyball", "Wrestling"])
 primary_color = st.selectbox("Primary Color", ["Blue", "Red", "Green", "Yellow", "Black", "White", "Gray"])
 secondary_color = st.selectbox("Secondary Color", ["White", "Black", "Gray", "Blue", "Red", "Green", "Yellow"])
 third_color = st.selectbox("Third Color", ["None", "White", "Black", "Gray", "Blue", "Red", "Green", "Yellow"])
