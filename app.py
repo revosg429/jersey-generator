@@ -11,7 +11,7 @@ st.title("REVO Custom Jersey Generator")
 jersey_type = st.selectbox("What type of jersey do you want to create?", ["Baseball", "Basketball", "Cheerleading", "Cycling", "American Football", "Hockey", "Lacrosse", "Rugby", "Soccer", "Softball", "Track & Field", "Volleyball", "Wrestling"])
 primary_color = st.selectbox("Primary Color", ["Blue", "Red", "Green", "Yellow", "Black", "White", "Gray", "Navy", "Gold", "Orange", "Purple", "Maroon", "Teal", "Silver"])
 secondary_color = st.selectbox("Secondary Color", ["Blue", "Red", "Green", "Yellow", "Black", "White", "Gray", "Navy", "Gold", "Orange", "Purple", "Maroon", "Teal", "Silver"])
-third_color = st.selectbox("Third Color", [["Blue", "Red", "Green", "Yellow", "Black", "White", "Gray", "Navy", "Gold", "Orange", "Purple", "Maroon", "Teal", "Silver"])
+third_color = st.selectbox("Third Color", ["Blue", "Red", "Green", "Yellow", "Black", "White", "Gray", "Navy", "Gold", "Orange", "Purple", "Maroon", "Teal", "Silver"])
 
 design_elements = st.text_input("Do you have any specific design elements in mind?", "Stripes")
 team_name = st.text_input("Anything else you'd like to include? (e.g., team name)", "Wildcats")
